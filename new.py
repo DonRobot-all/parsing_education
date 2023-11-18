@@ -1,5 +1,5 @@
 # numbers = [1, 2, 3]
-# search = 4
+# search = 2
 
 # for number in numbers:
 #     if number == search:
@@ -17,7 +17,7 @@
 
 
 # a = 3400
-# b = 4_234_325_251
+# b = 5_234_325_250
 # print(type(a))
 # print(type(b))
 # print(type(a) == type(b))
@@ -56,7 +56,7 @@
 
 # a = [1, 2, 3]
 # a[0] = a
-# print(a)
+# print(a[0])
 
 
 # a = {
@@ -95,16 +95,24 @@
 # print(result_numbers_two)
 
 
-def count_letters(text):
-    # text = text.lower().split()
+# def count_letters(text):
+#     return ''.join(str(text.lower().split().index(el)) for el in text.lower().split())
+# print(count_letters('THE ONE BUMBLE BEE one bumble the bee'))
 
-    # splitted_text = text.split()
 
-    # res = ''
+# pi = 3.14
+# if pi == 3.1415:
+#     print(pi)
 
-    # for el in splitted_text:
-    #     res += str(splitted_text.index(el))
+# a = False; b = False
+# print(a and b)
 
-    # return res
-    return ''.join(str(text.lower().split().index(el)) for el in text.lower().split())
-print(count_letters('THE ONE BUMBLE BEE one bumble the bee'))
+# a = -1
+# b = 2 if a == 10 else 1
+# print(b)
+
+print('привет', end='')
+print('школа', end='')
+
+
+a = '123123'
