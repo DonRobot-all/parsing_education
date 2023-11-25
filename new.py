@@ -109,10 +109,13 @@
 
 # a = -1
 # b = 2 if a == 10 else 1
-# print(b)
 
-print('привет', end='')
-print('школа', end='')
+a = [1,2,3]
+print(id(a))
+a.append(2)
+print(id(a))
 
-
-a = '123123'
+a = 2
+print(id(a))
+a = a + 2
+print(id(a))
