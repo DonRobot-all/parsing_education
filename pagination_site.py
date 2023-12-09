@@ -6,11 +6,19 @@ first_side = 'https://parsinger.ru/html/'
 response = requests.get(url=url)
 soup = BeautifulSoup(response.text, 'html.parser')
 pagination = soup.find('div', class_='pagen').find_all('a')
-print(pagination)
 pages = [f"{first_side}{page['href']}" for page in pagination]
-print(pages)
+total = []
+for page in pages:
+    response = requests.get(url=page)
+    response.encoding = 'utf-8'
+    soup = BeautifulSoup(response.text, 'html.parser')
+    things_on_page = soup.find_all('a', class_='name_item')
+    total.append([things.text for things in things_on_page])
 
-pages_one = requests.get(url=url)
-soup = BeautifulSoup(pages_one.text, 'html.parser')
-pagination = soup.find('div', class_='img_box').find_all('a')
-print(pagination)
+print(total)
+
+
+# pages_one = requests.get(url=url)
+# soup = BeautifulSoup(pages_one.text, 'html.parser')
+# pagination = soup.find('div', class_='img_box').find_all('a')
+# print(pagination)
